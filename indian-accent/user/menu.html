@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Indian Accent</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar (same as previous) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="https://via.placeholder.com/50" alt="Indian Accent Logo" class="d-inline-block align-top">
+            Indian Accent
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html"><i class="fas fa-utensils"></i> Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="order-history.html"><i class="fas fa-history"></i> Order History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="profile.html">View Profile</a>
+                        <a class="dropdown-item" href="logout.html">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menu Filters Section -->
+    <div class="container mt-5">
+        <h3>Menu - Indian Accent</h3>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <h5>Filter by:</h5>
+                <form id="filterForm">
+                    <div class="form-group">
+                        <label for="vegNonVeg">Veg / Non-Veg</label>
+                        <select class="form-control" id="vegNonVeg">
+                            <option value="">All</option>
+                            <option value="veg">Veg</option>
+                            <option value="nonveg">Non-Veg</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="priceRange">Price Range</label>
+                        <select class="form-control" id="priceRange">
+                            <option value="">All</option>
+                            <option value="low">Low to High</option>
+                            <option value="high">High to Low</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select class="form-control" id="category">
+                            <option value="">All</option>
+                            <option value="appetizers">Appetizers</option>
+                            <option value="maincourse">Main Course</option>
+                            <option value="desserts">Desserts</option>
+                            <option value="beverages">Beverages</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Apply Filters</button>
+                </form>
+            </div>
+
+            <!-- Dishes Cards Section -->
+            <div class="col-md-8">
+                <div class="row" id="menuItems">
+                    <!-- Sample Dish 1 -->
+                    <div class="col-md-4 dish" data-veg="veg" data-price="low" data-category="appetizers">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Dish 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Veg Spring Rolls</h5>
+                                <p class="card-text">Crispy spring rolls stuffed with vegetables.</p>
+                                <p class="font-weight-bold">₹150</p>
+                                <button class="btn btn-success btn-block">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sample Dish 2 -->
+                    <div class="col-md-4 dish" data-veg="nonveg" data-price="high" data-category="maincourse">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Dish 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Butter Chicken</h5>
+                                <p class="card-text">Tender chicken cooked in a creamy tomato-based sauce.</p>
+                                <p class="font-weight-bold">₹350</p>
+                                <button class="btn btn-success btn-block">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sample Dish 3 -->
+                    <div class="col-md-4 dish" data-veg="veg" data-price="low" data-category="desserts">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Dish 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Gulab Jamun</h5>
+                                <p class="card-text">Soft and sweet dumplings soaked in sugar syrup.</p>
+                                <p class="font-weight-bold">₹120</p>
+                                <button class="btn btn-success btn-block">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More dishes can be added similarly -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script for Filtering Menu -->
+    <script>
+        document.getElementById('filterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var vegNonVeg = document.getElementById('vegNonVeg').value;
+            var priceRange = document.getElementById('priceRange').value;
+            var category = document.getElementById('category').value;
+
+            var dishes = document.querySelectorAll('.dish');
+
+            dishes.forEach(function(dish) {
+                var dishVeg = dish.getAttribute('data-veg');
+                var dishPrice = dish.getAttribute('data-price');
+                var dishCategory = dish.getAttribute('data-category');
+
+                var showDish = true;
+
+                if (vegNonVeg && dishVeg !== vegNonVeg) {
+                    showDish = false;
+                }
+
+                if (priceRange && dishPrice !== priceRange) {
+                    showDish = false;
+                }
+
+                if (category && dishCategory !== category) {
+                    showDish = false;
+                }
+
+                if (showDish) {
+                    dish.style.display = 'block';
+                } else {
+                    dish.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
